@@ -7,13 +7,29 @@
     <link rel="stylesheet" href="./src/style/style.css" />
   </head>
   <body>
-    <canvas id="board"></canvas>
-
-    <script src="./src/constants.js"></script>
-    <script src="./src/movement.js"></script>
-    <script src="./src/collision.js"></script>
-    <script src="./src/platform.js"></script>
-    <script src="./src/doodler.js"></script>
-    <script src="./src/index.js"></script>
+    <div class="container" id="container">
+      <canvas id="board" class="board"></canvas>
+      <div class="main-menu" id="main-menu">
+        <h1 class="title">doodle jump</h1>
+        <buttton id="start-game" class="button">play</buttton>
+        <p class="info">
+          use
+          <span class="key left">←</span>
+          <span class="key right">→</span>
+          to move and space to restart...
+        </p>
+      </div>
+      <div class="game-over" id="game-over">
+        <p class="title">game over!</p>
+        <p id="score-number" class="score-number"></p>
+        <p id="highest-score" class="highest-score">Highest Score: 0 points!</p>
+        <p class="instruction">Press space to restart</p>
+      </div>
+    </div>
+    <script src="/src/constants.js"></script>
+    <script src="/src/movement.js"></script>
+    <script src="/src/collision.js"></script>
+    <script src="/src/platform.js"></script>
+    <script src="/src/index.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-// Doodler movement
+// Function to handle doodler movement based on key events
 function moveDoodler(e) {
   if (e.code == "ArrowRight" || e.code == "KeyD") {
     // Move right
@@ -9,7 +9,10 @@ function moveDoodler(e) {
     velocityX = -4;
     doodler.img = doodlerLeftImg;
   } else if (e.code == "Space" && gameOver) {
-    //Reset the game
+    //Reset the game when space is pressed after game over
+    hideGameOverMenu();
+
+    // Reset doodler properties
     doodler = {
       img: doodlerRightImg,
       x: DOODLER_X,
@@ -29,5 +32,5 @@ function moveDoodler(e) {
 
 // Resets the horizontal velocity to stop doodler going horizontally to any direction
 function stopDoodle() {
-  velocityX = 0;
+  velocityX = 0; // Resets the horizontal velocity to stop the doodler from moving horizontally.
 }

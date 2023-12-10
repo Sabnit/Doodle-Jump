@@ -1,7 +1,98 @@
-body {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+
+a {
+  text-decoration: none;
 }
 
-#board {
+body {
+  text-align: center;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.board {
   background-image: url("../../img/doodle-jump-background.png");
+  width: 360px;
+  height: 600px;
+}
+
+.container {
+  background-image: url("../../img/doodle-jump-background.png");
+  width: 360px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 158px;
+  position: absolute;
+}
+
+.title {
+  font-size: 60px;
+  color: #bd5747;
+  transform: rotate(-10deg);
+  margin: 0px;
+  font-weight: normal;
+}
+
+.button {
+  width: 120px;
+  height: 40px;
+  background-image: url("../../img/platform.png");
+  background-repeat: no-repeat;
+  display: block;
+  color: #000;
+  font-size: 18px;
+  line-height: 31px;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+.info {
+  font-size: 20px;
+  color: #5a5816;
+}
+
+.game-over {
+  background-image: url("../../img/doodle-jump-background.png");
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  visibility: hidden;
+  left: 0;
+  z-index: 2;
+}
+
+.game-over .title {
+  padding-top: 100px;
+}
+
+.game-over .score-number,
+.game-over .highest-score {
+  font-size: 23px;
+  padding: 0;
+  line-height: 47px;
+  margin: 0px 0 0 5px;
+  color: #000;
+  font-weight: 500;
+  padding-left: 60px;
+}
+
+.game-over .instruction {
+  padding-top: 100px;
+  font-size: 20px;
+  color: brown;
 }

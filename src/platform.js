@@ -1,7 +1,6 @@
 // Platforms varaibles
 let platformArray = [];
-let platformWidth = 60;
-let platformHeight = 18;
+
 let passedPlatforms = [];
 let platformImg;
 
@@ -15,7 +14,7 @@ function handlePlatformMovement(platform) {
 // Detects doodler and platform collision
 function handlePlatformCollision(platform) {
   if (detectCollision(doodler, platform) && velocityY >= 0) {
-    jumpSound.play();
+    gameSound.jumpSound.play();
     velocityY = initialVelocityY; // Jump
   }
 }
@@ -48,8 +47,8 @@ function placePlatforms() {
     img: platformImg,
     x: BOARD_WIDTH / 2,
     y: BOARD_HEIGHT - 50,
-    width: platformWidth,
-    height: platformHeight,
+    width: PLATFORM_WIDTH,
+    height: PLATFORM_HEIGHT,
   };
 
   platformArray.push(platform);
@@ -60,8 +59,8 @@ function placePlatforms() {
       img: platformImg,
       x: randomX,
       y: BOARD_HEIGHT - 75 * i - 150,
-      width: platformWidth,
-      height: platformHeight,
+      width: PLATFORM_WIDTH,
+      height: PLATFORM_HEIGHT,
     };
 
     platformArray.push(platform);
@@ -69,14 +68,15 @@ function placePlatforms() {
 }
 
 // Creates new platform
+
 function newPlatform() {
   let randomX = Math.floor((Math.random() * BOARD_WIDTH * 3) / 4); //(0-1) * BOARD_WIDTH*3/4
   let platform = {
     img: platformImg,
     x: randomX,
-    y: -platformHeight,
-    width: platformWidth,
-    height: platformHeight,
+    y: -PLATFORM_HEIGHT,
+    width: PLATFORM_WIDTH,
+    height: PLATFORM_HEIGHT,
   };
 
   platformArray.push(platform);
