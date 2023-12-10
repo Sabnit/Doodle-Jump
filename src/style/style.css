@@ -9,9 +9,11 @@ body {
   font-family: "Gloria Hallelujah", cursive;
 }
 
-button {
+a {
   border: none;
+  text-decoration: none;
   background: none;
+  cursor: pointer;
 }
 
 .board {
